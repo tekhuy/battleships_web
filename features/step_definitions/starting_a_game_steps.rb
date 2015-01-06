@@ -14,10 +14,12 @@ Then(/^I enter "(.*?)"$/) do |arg1|
   fill_in("name", :with => arg1) 
 end
 
-Then(/^I shall be redirected to confirm page$/) do
-  visit('/confirm')
+Then(/^I shall be redirected to "(.*?)"$/) do |arg1|
+  visit(arg1)
 end
 
 Then(/^I shall see "(.*?)"$/) do |arg1|
   page.should have_content arg1
 end
+
+# All tests passing but not sure why... Prob with last two tests
