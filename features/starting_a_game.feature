@@ -24,4 +24,4 @@ Feature: Starting the game
     Given I am on the Start page
     Then I shall see "Please place your ship"
     Then I enter a ship on co-ordinate "A1"
-    Then I shall see "ship placed on A1"
+    Then I shall see "Ship placed on A1"
