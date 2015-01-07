@@ -24,16 +24,11 @@ class BattleShips < Sinatra::Base
   end
 
   get '/start' do
-    # session[:counter] = 0
-    # @counter = session[:counter]
     session[:ship_coord] = []
     erb :start 
   end
 
   post '/start' do
-    # session[:counter] += 1
-    # @counter = session[:counter]
-
     if params[:coordinate].empty?
       @error_coord = "You didn't enter a co-ordinate"
       erb :start
