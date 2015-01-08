@@ -25,3 +25,21 @@ Feature: Starting the game
     Then I shall see "Please place your ship"
     Then I enter a ship on coordinate "A1"
     Then I shall see "You have successfully placed a ship"
+
+  Scenario: To place a second ship in a legal place
+    Given I am on the Start page
+    Then I shall see "Please place your ship"
+    Then I enter a ship on coordinate "A1"
+    Then I shall see "You have successfully placed a ship"
+    Then I shall see "Please place another ship"
+    Then I enter a ship on coordinate "B2"
+    Then I shall see "You have successfully placed a ship" 
+
+    Scenario: To place a second ship in an illegal place
+    Given I am on the Start page
+    Then I shall see "Please place your ship"
+    Then I enter a ship on coordinate "A1"
+    Then I shall see "You have successfully placed a ship"
+    Then I shall see "Please place another ship"
+    Then I enter a ship on coordinate "A1"
+    Then I shall see "Error"

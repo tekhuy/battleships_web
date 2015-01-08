@@ -5,6 +5,7 @@ class BattleShips < Sinatra::Base
   enable :sessions
   
   get '/' do
+    session[:ship_coord] = []
     erb :index
   end
 
@@ -24,7 +25,6 @@ class BattleShips < Sinatra::Base
   end
 
   get '/start' do
-    session[:ship_coord] = []
     erb :start 
   end
 
